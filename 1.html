@@ -1,37 +1,76 @@
-﻿<!doctyoe html>
+<!doctyoe html>
 <html>
 <head>
 	<title>WEB - html</title>
 	<meta charset="utf-8">
 </head>	
-		
+<style>
+    h1{
+        border-bottom:10px solid purple;
+        padding : 10px;
+        margin-bottom : 0px;
+            }
+    ol{
+        border-right: 5px solid green;
+        width: 100px;
+        font-family: 'montserrat';
+    }
+    #container{
+        display: grid;
+        grid-template-columns:160px 1fr;
+
+    }
+
+
+</style>
+
+
 
 <body>
-		<h1><a href = "index.html">WEB</a></h1>
 
+		<h1>WEB</h1>
+        <div id = "container">
 	<ol>
 		
 		<li><a href = "1.html" >HTML</a></li>
 		<li><a href = "2.html" >CSS</a></li>
 		<li><a href = "3.html" >JavaScript</a></li>
 	</ol>
-	<ul>
-		<li>egoing</li>
-		<li>duru</li>
-		<li>other</li>
+    </div>
 	</ul>
 
 
-	<h2> HTML </h2>
+    <div><h2> HTML </h2>
+        <div id="piechart" style="width: 300px; height: 300px;"></div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+    
+          function drawChart() {
+    
+            var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Work',     11],
+              ['Eat',      2],
+              ['Commute',  2],
+              ['Watch TV', 2],
+              ['Sleep',    7]
+            ]);
+    
+            var options = {
+              title: 'My Daily Activities'
+            };
+    
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    
+            chart.draw(data, options);
+          }
+        </script>
 
 
 
-	<a target="_blank" href = "https://source.unsplash.com/daily" "width=400">HTML</a> is <u>Hyper <b>Text</b> Markup</u> Language
-	<br><br><br>
-
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/h5qtBRY29P8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-	<br><br>
-	<img src = "image.jpg" width = "400">
+</div>
+</div>
 </body>
 </html>
-

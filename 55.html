@@ -18,31 +18,43 @@
             <li><a href="5.html">database</a></li>
         </ol>
         <div id="article">
-            <script src = "script.js"></script>
-
-  
-                
-        
-            <input type="button" value="night" onclick="
+            <script>
+                function toNight(){
+                    document.querySelector('body').style.color = 'white';  
+                    document.querySelector('body').style.backgroundColor = 'black';
+                    var links = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < links.length){
+                        links[i].style.color='white';
+                        i = i + 1;
+                    }
+                }    
+                function toDay(){
+                    document.querySelector('body').style.backgroundColor = 'white';
+                    document.querySelector('body').style.color = 'black';   
+                    var links = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < links.length){
+                        links[i].style.color='black';
+                        i = i + 1;
+                    }
+                }
+            </script>
+            <input type="button" id="sdfkh" value="night" onclick="
                     if(this.value === 'night'){
-                    Color.toNight();
+                    toNight();
                     this.value = 'day';
-
-
                    
                     }
                 else {
-                    Color.toDay();
+                    toDay();
                     this.value = 'night';
-
-
                     
                 }
             ">
             <h2>Database</h2>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quae pariatur, labore itaque voluptatem
-            corrupti
-            a, quis quos facere sit, beatae illum? Tenetur, id vitae. Omnis nemo illo saepe fugiat.
+
+            </script>
             <div id="disqus_thread"></div>
             <script>
                 /**

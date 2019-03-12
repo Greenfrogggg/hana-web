@@ -18,12 +18,34 @@
             <li><a href="5.html">database</a></li>
         </ol>
         <div id="article">
-            <script src = "script.js"></script>
+            <script>
+                var Color = {
+                    toNight:function(){
+                        document.querySelector('body').style.color = 'white';  
+                    document.querySelector('body').style.backgroundColor = 'black';
+                    var links = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < links.length){
+                        links[i].style.color='white';
+                        i = i + 1;
+                       }
+                    },
+                    toDay: function(){
+                        document.querySelector('body').style.backgroundColor = 'white';
+                        document.querySelector('body').style.color = 'black';   
+                        var links = document.querySelectorAll('a');
+                        var i = 0;
+                        while(i < links.length){
+                        links[i].style.color='black';
+                        i = i + 1;
+                        }
 
-  
+                    }
+                }
+
                 
-        
-            <input type="button" value="night" onclick="
+            </script>
+            <input type="button" id="sdfkh" value="night" onclick="
                     if(this.value === 'night'){
                     Color.toNight();
                     this.value = 'day';
